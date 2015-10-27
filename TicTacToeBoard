@@ -1,3 +1,4 @@
+
 import javax.swing.ComboBoxModel;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,7 +11,7 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class TicTacToeBoard {
+public class TicTacToeBoard extends JPanel {
 
     public TicTacToeBoard() {
     	JFrame frame =new JFrame();//creating instance of JFrame  
@@ -20,7 +21,7 @@ public class TicTacToeBoard {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Switching Between Panels");
         frame.setSize(650,650);
-        frame.setLayout(null);//using no layout managers
+        //frame.setLayout(null);//using no layout managers
 		frame.setVisible(true);//making the frame visible 
         //This will center the JFrame in the middle of the screen
         frame.setLocationRelativeTo(null);
@@ -33,15 +34,18 @@ public class TicTacToeBoard {
         // ---- VISIBILITY DEFAULTS TO TRUE ----
         JLabel comboLbl = new JLabel("Which large board do you want to play on?"); //label
         JComboBox comboOptions = new JComboBox(largeBoxOptions);
-        
+
         comboPanel.add(comboLbl); //add to comboPanel the label ("Fruits:")
-        comboPanel.add(comboOptions); //add to comboPanel the combobox
+        comboPanel.add(comboOptions);   //add to comboPanel the combobox
+        JButton boxOptionBut = new JButton( "Submit Box Number"); 
+
         
-        /**
-         * Create buttons
-         */
 		JButton restart=new JButton("Restart");//creating instance of JButton, restart button  
+		restart.setBounds(130,100,100,40);//x axis, y axis, width, height  
+		
 		JButton exit=new JButton("Exit");//creating instance of JButton  
+		exit.setBounds(30,100,100,40);//x axis, y axis, width, height
+		
 		
         
         //TODO: Define what happens when you click restart
@@ -64,20 +68,17 @@ public class TicTacToeBoard {
             }
         });
         
-        // TODO: Get buttons to show up
+        
         //Puts JPanel and JButtons in different areas
         frame.add(comboPanel, BorderLayout.CENTER); 
         frame.add(restart); 
-        restart.setBounds(100,470,100,40);//x axis, y axis, width, height  
-		restart.setVisible(true);
-		
+        restart.setBounds(100,550,100,40);//x axis, y axis, width, height  
         frame.add(exit);
-        exit.setBounds(210,470,100,40);//x axis, y axis, width, height
-		exit.setVisible(true);
-		
+        exit.setBounds(100,520,100,40);//x axis, y axis, width, height  
+
+        
         //make sure the JFrame is visible
         frame.setVisible(true); //the JFrame is set to visible
-        
     }
     
 }
