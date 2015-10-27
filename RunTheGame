@@ -1,0 +1,8 @@
+
+public class RunTheGame {
+
+public static void main(String[] args) {
+        
+        new TicTacToeBoard();
+    }
+}
