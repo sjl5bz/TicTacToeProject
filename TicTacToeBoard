@@ -1,0 +1,79 @@
+import javax.swing.ComboBoxModel;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JComboBox;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class TicTacToeBoard {
+
+    public TicTacToeBoard() {
+    	JFrame frame =new JFrame();//creating instance of JFrame  
+
+        // FORMATTING JFRAME:
+        //make sure the program exits when the frame closes
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Switching Between Panels");
+        frame.setSize(300,250);
+        frame.setLayout(null);//using no layout managers
+		frame.setVisible(true);//making the frame visible 
+        //This will center the JFrame in the middle of the screen
+        frame.setLocationRelativeTo(null);
+        
+        //Options for the JComboBox ("Drop down menu")
+        String[] largeBoxOptions = {"1","2","3","4","5","6","7","8","9"};
+
+        //The first JPanel contains a JLabel and JCombobox
+        final JPanel comboPanel = new JPanel(); //create new JPanel "comboPanel"
+        // ---- VISIBILITY DEFAULTS TO TRUE ----
+        JLabel comboLbl = new JLabel("Which large board do you want to play on?"); //label
+        JComboBox comboOptions = new JComboBox(largeBoxOptions);
+        
+        comboPanel.add(comboLbl); //add to comboPanel the label ("Fruits:")
+        comboPanel.add(comboOptions);   //add to comboPanel the combobox
+        
+        
+		JButton restart=new JButton("Restart");//creating instance of JButton, restart button  
+		restart.setBounds(130,100,100,40);//x axis, y axis, width, height  
+		
+		JButton exit=new JButton("Exit");//creating instance of JButton  
+		exit.setBounds(30,100,100,40);//x axis, y axis, width, height
+		
+		
+        
+        //TODO: Define what happens when you click restart
+        restart.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent event)
+            {
+            	
+            }
+        });
+        
+        //TODO: Define what happens when you click exit
+        exit.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent event)
+            {
+            	
+            }
+        });
+        
+        
+        //Puts JPanel and JButtons in different areas
+        frame.add(comboPanel, BorderLayout.CENTER); 
+        frame.add(restart,BorderLayout.SOUTH); 
+        frame.add(exit, BorderLayout.SOUTH);
+        
+        //make sure the JFrame is visible
+        frame.setVisible(true); //the JFrame is set to visible
+    }
+    
+}
