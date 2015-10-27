@@ -19,7 +19,7 @@ public class TicTacToeBoard {
         //make sure the program exits when the frame closes
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Switching Between Panels");
-        frame.setSize(300,250);
+        frame.setSize(500,500);
         frame.setLayout(null);//using no layout managers
 		frame.setVisible(true);//making the frame visible 
         //This will center the JFrame in the middle of the screen
