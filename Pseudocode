@@ -1,0 +1,23 @@
+Pseudocode
+
+create list of options for user to pick which board we need to use
+--> perhaps by using the type-in interface
+
+Once picked,
+- highlight the large square that is being used for the game
+- make sure that things outside this square cannot be changed
+- have the people play the game
+        - users can click on any UNUSED square to make Xs or Os
+        - if 3 in a row, say that user won the game
+- if three large games in a row, than that user wins the match
+        - a game over screen should be shown, showing who won and if there was a tie
+
+
+EC's:
+  1. Instead of two people taking turns to play against each other, give an option where a
+person can play against the computer (+10 pts)
+  2. Add animation of some sort (+5 to 10 pts)
+  3. How good your GUI is – how good it looks above and beyond the standard b&w grid (+5
+to 10 pts)
+  4. Unique/interesting way of handling ties (+5 to 10 pts)
+  5. Tournament feature / best of X games / etc. (+10 pts) 
