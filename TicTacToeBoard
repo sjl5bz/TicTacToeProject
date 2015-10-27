@@ -35,7 +35,7 @@ public class TicTacToeBoard {
         JComboBox comboOptions = new JComboBox(largeBoxOptions);
         
         comboPanel.add(comboLbl); //add to comboPanel the label ("Fruits:")
-        comboPanel.add(comboOptions);   //add to comboPanel the combobox
+        comboPanel.add(comboOptions); //add to comboPanel the combobox
         
         /**
          * Create buttons
@@ -72,7 +72,7 @@ public class TicTacToeBoard {
 		restart.setVisible(true);
 		
         frame.add(exit);
-        exit.setBounds(170,470,100,40);//x axis, y axis, width, height
+        exit.setBounds(210,470,100,40);//x axis, y axis, width, height
 		exit.setVisible(true);
 		
         //make sure the JFrame is visible
